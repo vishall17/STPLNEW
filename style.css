@@ -45,7 +45,7 @@
             padding: 0 20px;
         }
 
-        /* Header Styles */
+
         header {
             background-color: var(--bg-color);
             box-shadow: var(--shadow);
@@ -124,7 +124,6 @@
             cursor: pointer;
         }
 
-        /* Hero Section - Full Screen */
         .hero {
             height: 100vh;
             display: flex;
@@ -206,7 +205,7 @@
             }
         }
 
-        /* Floating Background Elements */
+
         .floating-elements {
             position: absolute;
             top: 0;
@@ -264,18 +263,19 @@
             }
         }
 
-
-        
-        #page2 {
+        #text-animation-section {
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            height: 100vh;
             line-height: 1.3;
             color: var(--text-color);
+            background-color: var(--bg-color);
+            overflow: hidden;
         }
         
-        #page2::before {
+        #text-animation-section::before {
             content: '';
             position: absolute;
             inset: 0;
@@ -285,20 +285,24 @@
             background-size: 50px 50px;
             opacity: 0.1;
         }
+        
         #text-container {
-            width: 80%;
+            width: 85%;
             position: relative;
             z-index: 10;
         }
         
         #text-container h2 {
-            font-size: 7rem;
+            font-size: 3.5rem;
             margin-bottom: 2rem;
             font-weight: 800;
+            line-height: 1.2;
         }
+        
+        /* #text-container h2 span {
+            display: inline-block;
+        } */
 
-
-        /* Services Section */
         .section {
             padding: 100px 0;
             position: relative;
@@ -378,7 +382,7 @@
             margin-bottom: 15px;
         }
 
-        /* About Section */
+
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -421,11 +425,12 @@
             display: block;
         }
 
-        /* Stats Section */
         .stats {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 80px 0;
+            position: relative;
+            overflow: hidden;
         }
 
         .stats-grid {
@@ -450,7 +455,6 @@
             opacity: 0.9;
         }
 
-        /* Team Section */
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -507,7 +511,6 @@
             margin-bottom: 15px;
         }
 
-        /* Contact Section */
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -568,7 +571,6 @@
             resize: vertical;
         }
 
-        /* Footer */
         footer {
             background-color: var(--card-bg);
             padding: 50px 0 20px;
@@ -645,7 +647,6 @@
             font-size: 14px;
         }
 
-        /* Navigation Dots */
         .nav-dots {
             position: fixed;
             right: 20px;
@@ -671,7 +672,50 @@
             transform: scale(1.3);
         }
 
-        /* Responsive Styles */
+        .animated-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .magnetic-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .magnetic-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .magnetic-btn:hover::before {
+            left: 100%;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            will-change: transform;
+        }
+
+        @media (max-width: 1200px) {
+            #text-container h2 {
+                font-size: 3.5rem;
+            }
+        }
+
         @media (max-width: 992px) {
             .about-content,
             .contact-content {
@@ -684,6 +728,10 @@
 
             .nav-dots {
                 display: none;
+            }
+
+            #text-container h2 {
+                font-size: 3rem;
             }
         }
 
@@ -739,6 +787,10 @@
             .section-title h2 {
                 font-size: 30px;
             }
+
+            #text-container h2 {
+                font-size: 2.5rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -757,5 +809,9 @@
             .service-card,
             .team-card {
                 padding: 20px;
+            }
+
+            #text-container h2 {
+                font-size: 2rem;
             }
         }
