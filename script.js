@@ -1,3 +1,29 @@
+        document.addEventListener('DOMContentLoaded', function() {
+            const tl = gsap.timeline();
+            
+            tl.to(".vi-mask-group", {
+                rotate: 10,
+                duration: 2.5,
+                ease: "power4.inOut",
+                transformOrigin: "50% 50%",
+            }).to(".vi-mask-group", {
+                scale: 10,
+                duration: 2,
+                delay: -1.8,
+                ease: "expo.inOut",
+                transformOrigin: "50% 50%",
+                opacity: 0,
+                onUpdate: function() {
+                    if (this.progress() >= 0.9) {
+                        document.querySelector(".svg").remove();
+                        showContent();
+                        this.kill();
+                    }
+                },
+            });
+        });
+        
+function showContent() {
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, TextPlugin);
 
         const sections = document.querySelectorAll('section');
@@ -5,10 +31,14 @@
         sections.forEach(section => {
             if(section.id === 'home') {
                 gsap.from('.hero h1', {
-                    duration: 1.5,
+                    scale: 1,
+                    rotate: 0,
+                    duration: 2,
                     y: 100,
                     opacity: 0,
-                    ease: "power3.out",
+                    //ease: "power3.out",
+                    delay: -1,
+                    ease: "expo.inOut",
                     stagger: 0.1
                 });
 
@@ -196,6 +226,7 @@
                 });
             }
         });
+    
 
         gsap.to("header", {
             backgroundColor: "var(--bg-color)",
@@ -207,7 +238,7 @@
                 toggleActions: "play none none reverse"
             }
         });
-
+    }
         const magneticBtns = document.querySelectorAll('.magnetic-btn');
         
         magneticBtns.forEach(btn => {
