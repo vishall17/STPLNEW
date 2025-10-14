@@ -329,6 +329,8 @@
             });
         });
 
+        document.body.classList.toggle('dark-mode');
+        
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = themeToggle.querySelector('i');
 
