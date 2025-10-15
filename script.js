@@ -24,6 +24,10 @@
         // });
         
 // function showContent() {
+
+ Shery.mouseFollower();
+ Shery.makeMagnet(".magnet");
+
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, TextPlugin);
 
         const sections = document.querySelectorAll('section');

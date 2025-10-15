@@ -9,6 +9,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.css" />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css" />
+
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark-mode">
@@ -56,15 +62,15 @@
             <div class="logo">Sushma<span>Technology</span></div>
             <nav id="navbar">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#text-animation-section">Our Story</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#team">Our Team</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#home" class="magnet">Home</a></li>
+                    <li><a href="#text-animation-section" class="magnet">Our Story</a></li>
+                    <li><a href="#services" class="magnet">Services</a></li>
+                    <li><a href="#about" class="magnet">About Us</a></li>
+                    <li><a href="#team" class="magnet">Our Team</a></li>
+                    <li><a href="#contact" class="magnet">Contact Us</a></li>
                 </ul>
             </nav>
-            <button class="theme-toggle" id="themeToggle">
+            <button class="theme-toggle magnet" id="themeToggle">
                 <i class="fas fa-moon"></i>
             </button>
             <div class="mobile-menu" id="mobileMenu">
@@ -197,7 +203,7 @@
                     <p>Founded in 2011, is an Information Technology Product and Software Solutions Company. We offer Software consulting, Software Maintenance and products like ERP Software, School Management Software, Custom Software Development across various stages in the Software Development lifecycle and many more.</p>
                     <p>We have a team of professionals with tremendous industry experience in fields ranging from Ecommerce applications to assembly language programming.</p>
                     <p>We offer solutions to make customers' business function simpler, faster and more efficient to help them achieve their business goals.</p>
-                    <a href="#contact" class="btn btn-primary magnetic-btn">Contact Us</a>
+                    <a href="#contact" class="btn btn-primary magnetic-btn magnet">Contact Us</a>
                 </div>
                 <div class="about-image">
                     <div style="background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px;">
@@ -439,7 +445,7 @@
                             <label for="message">Message</label>
                             <textarea id="message" class="form-control" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary magnetic-btn">Send Message</button>
+                        <button type="submit" class="btn btn-primary magnetic-btn magnet">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -453,10 +459,10 @@
                     <h3>Sushma Technology</h3>
                     <p>Transforming businesses with innovative software solutions since 2011.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f magnet"></i></a>
+                        <a href="#"><i class="fab fa-twitter magnet"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in magnet"></i></a>
+                        <a href="#"><i class="fab fa-instagram magnet"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -487,7 +493,7 @@
                         <div class="form-group">
                             <input type="email" class="form-control" placeholder="Your Email">
                         </div>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                        <button type="submit" class="btn btn-primary magnet">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -497,5 +503,6 @@
         </div>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.js"></script>
 <script src="script.js"></script>
 </html>
